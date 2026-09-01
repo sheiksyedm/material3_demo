@@ -1,0 +1,20 @@
+<Shell
+    x:Class="material3_demo.AppShell"
+    xmlns:local="clr-namespace:material3_demo"
+    Title="Material 3 Gallery"
+    FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Controls"
+            Icon="controls.svg"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="controls" />
+        <ShellContent
+            Title="About"
+            Icon="about.svg"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="about" />
+    </TabBar>
+
+</Shell>

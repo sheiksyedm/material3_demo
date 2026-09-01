@@ -1,0 +1,32 @@
+<ContentPage
+    x:Class="material3_demo.AboutPage"
+    Title="About">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20,24"
+            Spacing="16">
+            <Label
+                Text="About this sample"
+                Style="{StaticResource DisplayTitleStyle}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label
+                        Text="Material 3 is enabled with the UseMaterial3 MSBuild property and applies to Android only."
+                        FontAttributes="Bold" />
+                    <Label
+                        Text="This second tab also demonstrates the Material 3 Shell bottom navigation implementation. iOS, Mac Catalyst, and Windows continue to use their native design systems." />
+                    <Label
+                        Text="Target: .NET 11 Preview 7"
+                        Style="{StaticResource SupportingTextStyle}" />
+                </VerticalStackLayout>
+            </Border>
+
+            
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,140 @@
+﻿<ContentPage
+    x:Class="material3_demo.MainPage"
+    Title="Material 3 Controls">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20,16,20,32"
+            Spacing="16">
+
+            <Label
+                Text=".NET MAUI Material 3"
+                Style="{StaticResource DisplayTitleStyle}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Label
+                Text=".NET 11 Preview 7 • Android"
+                Style="{StaticResource SupportingTextStyle}" />
+
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Text input" Style="{StaticResource SectionTitleStyle}" />
+                    <Entry
+                        x:Name="NameEntry"
+                        Placeholder="Full name"
+                        Text="Alex Morgan" />
+                    <Editor
+                        Placeholder="Tell us about your Material 3 experience"
+                        AutoSize="TextChanges"
+                        MinimumHeightRequest="96" />
+                    <SearchBar
+                        Placeholder="Search controls"
+                        TextChanged="OnSearchTextChanged" />
+                    <Label
+                        x:Name="SearchStatusLabel"
+                        Text="Type in the SearchBar to see its clear action."
+                        Style="{StaticResource SupportingTextStyle}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Selection controls" Style="{StaticResource SectionTitleStyle}" />
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8">
+                        <CheckBox x:Name="UpdatesCheckBox" IsChecked="True" />
+                        <Label
+                            Grid.Column="1"
+                            Text="Receive product updates"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                    <HorizontalStackLayout Spacing="16">
+                        <RadioButton
+                            Content="Light"
+                            GroupName="ThemeMode"
+                            IsChecked="True" />
+                        <RadioButton
+                            Content="Dark"
+                            GroupName="ThemeMode" />
+                        <RadioButton
+                            Content="System"
+                            GroupName="ThemeMode" />
+                    </HorizontalStackLayout>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Enable notifications" VerticalTextAlignment="Center" />
+                        <Switch
+                            x:Name="NotificationSwitch"
+                            Grid.Column="1"
+                            IsToggled="True"
+                            Toggled="OnNotificationToggled" />
+                    </Grid>
+                    <Label
+                        x:Name="NotificationStatusLabel"
+                        Text="Notifications are enabled."
+                        Style="{StaticResource SupportingTextStyle}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Pickers" Style="{StaticResource SectionTitleStyle}" />
+                    <Picker
+                        x:Name="FrameworkPicker"
+                        Title="Choose a target framework" />
+                    <DatePicker x:Name="ReleaseDatePicker" />
+                    <TimePicker Time="09:30:00" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Progress and value" Style="{StaticResource SectionTitleStyle}" />
+                    <ActivityIndicator
+                        IsRunning="True"
+                        HorizontalOptions="Start" />
+                    <ProgressBar Progress="0.68" />
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                        <Slider
+                            x:Name="VolumeSlider"
+                            Maximum="100"
+                            Value="42"
+                            ValueChanged="OnVolumeChanged" />
+                        <Label
+                            x:Name="VolumeLabel"
+                            Grid.Column="1"
+                            Text="42%"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Images and actions" Style="{StaticResource SectionTitleStyle}" />
+                    <Image
+                        Source="dotnet_bot.png"
+                        HeightRequest="120"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description=".NET bot illustration" />
+                    <HorizontalStackLayout Spacing="12">
+                        <ImageButton
+                            Source="dotnet_bot.png"
+                            HeightRequest="56"
+                            WidthRequest="56"
+                            Clicked="OnImageButtonClicked"
+                            SemanticProperties.Description="Show an ImageButton message" />
+                        <Button
+                            x:Name="ActionButton"
+                            Text="Save profile"
+                            Clicked="OnActionButtonClicked"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Label
+                        x:Name="ActionStatusLabel"
+                        Text="Button and ImageButton use Material 3 shape and ripple behavior."
+                        Style="{StaticResource SupportingTextStyle}" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
