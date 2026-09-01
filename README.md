@@ -51,5 +51,3 @@ Material 3 is enabled by this project property:
 ```
 
 The property affects Android only. Other targets use their native platform controls.
-
-The publication-ready article is available in [`material-3-dotnet-maui-blog.md`](material-3-dotnet-maui-blog.md).
